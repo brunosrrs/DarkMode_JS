@@ -2,7 +2,6 @@ const botao = document.getElementById("meu-Botao");
 const h1 = document.getElementById("page-title");
 const body = document.getElementsByTagName("body")[0];
 const darkmode = "dark-mode";
-const lightmode = "Light Mode";
 
 function changeMode(){
     changeClasses();
@@ -17,15 +16,17 @@ function changeClasses(){
 }
 
 function changeTexts(){
+    const Dark = "Dark Mode";
+    const Light = "Light Mode";
     
     if(botao.classList.contains(darkmode)){
-        botao.innerHTML = "Light Mode";
-        h1.innerHTML = "Dark Mode ON";
+        botao.innerHTML = Light;
+        h1.innerHTML = Dark + "ON";
         return;
     }
 
-    botao.innerHTML = "Dark mode";
-    h1.innerHTML = "Light Mode ON"
+    botao.innerHTML = Dark;
+    h1.innerHTML = Light + "ON";
 }
 
 
